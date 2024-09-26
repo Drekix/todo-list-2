@@ -1,6 +1,8 @@
 import { useState } from "react"
 import "./style.css"
 
+
+
 export default function App() {
   const [newItem, setNewItem] = useState("");
   //useState, newitem and onChange allows us to send and update to item form as we go
@@ -40,7 +42,8 @@ export default function App() {
   }
   
   return (
-  <>
+  <div className="todo-list-div">
+  <a href="/" className="logo"><img src="/images/jamie-h-logo-3.png" alt="" className="logo"/></a>
   <form onSubmit={handleSubmit} className="new-item-form"> 
     <div className="form-row">
       <label htmlFor="item">New Item</label>
@@ -70,6 +73,6 @@ export default function App() {
       )
     })}
   </ul>
-  </>
+  </div>
   )
 }

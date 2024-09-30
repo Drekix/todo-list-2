@@ -42,7 +42,7 @@ export default function App() {
   }
   
   return (
-  <div className="todo-list-div">
+  <> 
   <a href="/" className="logo"><img src="/images/jamie-h-logo-3.png" alt="" className="logo"/></a>
   <form onSubmit={handleSubmit} className="new-item-form"> 
     <div className="form-row">
@@ -54,6 +54,7 @@ export default function App() {
       />
     </div>
     <button className="btn">Add</button>
+    
   </form>
   <h1 className="header">Todo List</h1>
   <ul className="list">
@@ -61,7 +62,7 @@ export default function App() {
     {todos.map(todo => {
       return (
         <li key={todo.id}>
-          <label>
+          <label className="todo-label">
           <input type="checkbox" checked={todo.completed}
           onChange={e => toggleTodo(todo.id, e.target.checked)}/>
           {todo.title}
@@ -73,6 +74,6 @@ export default function App() {
       )
     })}
   </ul>
-  </div>
+  </>
   )
 }
